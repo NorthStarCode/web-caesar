@@ -24,9 +24,16 @@ markup = """
                 width: 540px;
                 height: 120px;
             }}
+            h1 {{
+                padding: 20px;
+                margin: 0 auto;
+                width: 540px;
+                font: 28px sans-serif;
+            }}
         </style>
     </head>
     <body>
+        <h1>Web-Caesar Project<h1>
         <form action="/caesar" method="post">
         <label for="rotate" />Rotate by:</label>
         <input id="rotate" type="text" value=0 name="rot" />
