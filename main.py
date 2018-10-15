@@ -34,7 +34,7 @@ markup = """
     </head>
     <body>
         <h1>Web-Caesar Project<h1>
-        <form action="/caesar" method="post">
+        <form action="/" method="post">
         <label for="rotate" />Rotate by:</label>
         <input id="rotate" type="text" value=0 name="rot" />
         <textarea name="text" cols="50" rows="3">{ctext}</textarea>
@@ -45,12 +45,12 @@ markup = """
 """
 
 
-@app.route("/", methods =['POST', 'GET'])
+@app.route("/", methods =['GET'])
 def index():
     form = markup.format(ctext="")
     return form
 
-@app.route("/caesar", methods =['POST'])
+@app.route("/", methods =['POST'])
 def encrypt():
     rot = int(request.form["rot"])
     text = request.form["text"]
